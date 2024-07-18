@@ -1,6 +1,6 @@
 {
   "name": "gloc",
-  "version": "8.2.67",
+  "version": "8.2.71",
   "engines": {
     "node": "16.19.0",
     "npm": "0.39.3"
@@ -54,7 +54,7 @@
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-react": "^7.7.4",
-    "@types/chrome": "0.0.81",
+    "@types/chrome": "^0.0.81",
     "@types/jquery": "^3.3.29",
     "babel-loader": "^8.0.6",
     "babel-plugin-import": "^1.13.0",

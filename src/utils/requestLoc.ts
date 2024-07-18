@@ -35,6 +35,7 @@ export const requestLoc = (repoName: string, tries: number, token: string): Prom
 		.then(async response => {
 			// A response of 202 indicates that stats are still being collected.
 			// After waiting for a couple seconds, the stats are usually available.
+			console.log(response);
 			if (response.status === 202) {
 				let sleepTime = 1000;
 				let status = 202;
@@ -70,6 +71,7 @@ export const requestLoc = (repoName: string, tries: number, token: string): Prom
 			return null;
 		})
 		.catch((err: GithubError) => {
+			console.error(err)
 			// this occurs when we retry after a 202 and still don't get a 200 response
 			if (err === undefined) {
 				console.error(`Error by getting stat for ${repoName}.`);

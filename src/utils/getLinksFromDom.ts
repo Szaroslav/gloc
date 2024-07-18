@@ -7,6 +7,7 @@ import { scrapData } from './scrapData';
 
 export const getLinksFromDom = (): Promise<InitialData> => {
 	const data = scrapData(parametersToMap) as InitialData;
+	console.log('data', data);
 
 	if (data.location !== LOCATION.UNKNOWN && isPositiveArray(data.links)) {
 		return Promise.resolve(data);
